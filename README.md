@@ -1,16 +1,46 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## SETUP
 
-In the project directory, you can run:
+In the project directory, I created my app with REACT named art-client:
+1.
+
+    npx create-react-app art-client
+2.
+
+    cd art-client
+
+&  : 
+
+     touch .env
+3.
+Inside my .env file I set my port for front end to : 
+
+     PORT=3001
+
+4. 
+setting a proxy to connect with backend part of mini_app:
+ in file => package.json set proxy to be:  http://localhost:3000:
+
+      "proxy": "http://localhost:3000",
+
+5. 
+check for connection set up correctly  by running in terminal:
 
 ### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app :
+Open [http://localhost:3001] to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+
+
+
+
+
+
 
 ### `npm test`
 
