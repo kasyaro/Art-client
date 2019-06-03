@@ -58,9 +58,9 @@ class Users extends Component {
                     this.state.isLoaded &&this.state.users.map(user => {
                         return (
                             <div className='arts' key={user.id}>
-                                 <h1>Welcome {user.first_name}!</h1>
+                                 {/* <h1>Welcome {user.first_name}!</h1> */}
                                 <Arts arts= {user.arts}/> 
-                                <button> create </button>
+                                
                                 {/* <button onClick ={()=> handleDelete(user)}> delete</button> */}
                             </div>
                         )
