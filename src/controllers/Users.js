@@ -7,6 +7,7 @@ class Users extends Component {
         this.state = {
            
               users: [],
+              isLoaded:false 
               
                    
          }
@@ -17,9 +18,9 @@ class Users extends Component {
     }
 
     getUsersArt() {
-        fetch('./users/')
+        fetch('/users/')
             .then(response => response.json())
-            .then(jsonedUsers => this.setState({ users: jsonedUsers }))
+            .then(jsonedUsers => this.setState({ users: jsonedUsers, isLoaded:true }))
             .catch(error => console.error(error))
     }
     
@@ -48,11 +49,13 @@ class Users extends Component {
 
 
     render() {
+        console.log(this.state.users);
+        
         return (
             <>
                
                 {
-                    this.state.users.map(user => {
+                    this.state.isLoaded &&this.state.users.map(user => {
                         return (
                             <div className='arts' key={user.id}>
                                  <h1>Welcome {user.first_name}!</h1>
